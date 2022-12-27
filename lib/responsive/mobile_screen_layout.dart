@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_flutter/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({super.key});
@@ -16,6 +18,12 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   void initState() {
     super.initState();
     getUsername();
+    addData();
+  }
+
+  addData() async {
+    UserProvider _userProvider = Provider.of(context, listen: false);
+    await _userProvider.refreshUser();
   }
 
   void getUsername() async {

@@ -28,11 +28,16 @@ class AddPostScreenState extends State<AddPostScreen> {
         title: const Text('Post to'),
         centerTitle: false,
         actions: [
-          TextButton(onPressed: () {}, child: const Text('Post', style: TextStyle(
-            color: Colors.blueAccent,
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),))
+          TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Post',
+                style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ))
         ],
       ),
     );

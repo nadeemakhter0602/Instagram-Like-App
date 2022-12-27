@@ -38,6 +38,12 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
     pageController.jumpToPage(page);
   }
 
+  void onPageChanged(int page) {
+    setState(() {
+      _page = page;
+    });
+  }
+
   addData() async {
     UserProvider _userProvider = Provider.of(context, listen: false);
     await _userProvider.refreshUser();
@@ -63,8 +69,9 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
         children: [
 
         ],
+        physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
-        // onPageChanged: onPageChanged,
+        onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,

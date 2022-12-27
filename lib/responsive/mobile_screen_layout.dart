@@ -17,12 +17,25 @@ class MobileScreenLayout extends StatefulWidget {
 class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   int _page = 0;
   String username = "";
+  late PageController pageController;
 
   @override
   void initState() {
     super.initState();
     getUsername();
     addData();
+    pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    pageController.dispose();
+  }
+
+  void navigationTapped(int page) {
+    pageController.jumpToPage(page);
   }
 
   addData() async {
@@ -45,8 +58,13 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   Widget build(BuildContext context) {
     model.User user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
-      body: Center(
-        child: Text('Test'),
+      body: PageView(
+        // list of widgets we need
+        children: [
+
+        ],
+        controller: pageController,
+        // onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,
@@ -87,6 +105,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
               label: '',
               backgroundColor: primaryColor),
         ],
+        onTap: navigationTapped,
       ),
     );
   }

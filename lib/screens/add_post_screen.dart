@@ -1,5 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:instagram_flutter/utils/colors.dart';
+import 'package:instagram_flutter/utils/utils.dart';
 
 class AddPostScreen extends StatefulWidget {
   const AddPostScreen({super.key});
@@ -18,6 +21,10 @@ class AddPostScreenState extends State<AddPostScreen> {
           SimpleDialogOption(
             padding: EdgeInsets.all(20),
             child: const Text('Take a Photo'),
+            onPressed: () async {
+              Navigator.of(context).pop();
+              Uint8List file = await pickImage(ImageSource.camera,);
+            },
           ),
         ],
       );

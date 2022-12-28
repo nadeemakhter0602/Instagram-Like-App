@@ -9,6 +9,21 @@ class AddPostScreen extends StatefulWidget {
 }
 
 class AddPostScreenState extends State<AddPostScreen> {
+
+  _selectImage(BuildContext context) async {
+    return showDialog(context: context, builder: (context) {
+      return SimpleDialog(
+        title: const Text('Create a Post'),
+        children: [
+          SimpleDialogOption(
+            padding: EdgeInsets.all(20),
+            child: const Text('Take a Photo'),
+          ),
+        ],
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // return Center(

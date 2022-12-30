@@ -6,8 +6,8 @@ Screenshots :
 
 * Login Screen
 
-![](assets\login.png)
+![](assets/login.png)
 
 * Sign up Screen
 
-![](assets\signup.png)
+![](assets/signup.png)

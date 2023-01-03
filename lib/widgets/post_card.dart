@@ -11,6 +11,38 @@ class PostCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         vertical: 10,
       ),
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(
+              vertical: 4,
+              horizontal: 16,
+            ).copyWith(right: 0),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 16,
+                  backgroundImage: NetworkImage(''),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('username'),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -70,6 +70,15 @@ class PostCard extends StatelessWidget {
               ],
             ),
           ),
+          // Image Section
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.35,
+            width: double.infinity,
+            child: Image.network(
+              '',
+              fit: BoxFit.cover,
+            ),
+          )
         ],
       ),
     );

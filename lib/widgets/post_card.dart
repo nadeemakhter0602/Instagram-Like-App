@@ -78,7 +78,31 @@ class PostCard extends StatelessWidget {
               '',
               fit: BoxFit.cover,
             ),
-          )
+          ),
+          // interaction tools
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.comment_outlined,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.send,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

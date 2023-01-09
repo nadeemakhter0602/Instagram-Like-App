@@ -4,10 +4,6 @@ An Instagram like app made using Flutter framework (Currently in progress).
 
 Screenshots :
 
-* Login Screen
+* Login Screen and Sign Up Screen
 
-![](assets/login.png)
-
-* Sign up Screen
-
-![](assets/signup.png)
+![](assets/login.png) ![](assets/signup.png)

@@ -101,6 +101,15 @@ class PostCard extends StatelessWidget {
                   Icons.send,
                 ),
               ),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: IconButton(
+                    icon: const Icon(Icons.bookmark_border),
+                    onPressed: () {},
+                  ),
+                ),
+              )
             ],
           ),
         ],

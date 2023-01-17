@@ -149,12 +149,27 @@ class PostCard extends StatelessWidget {
                     ),
                   ),
                 ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 4,
+                    ),
+                    child: Text(
+                      'View all 120 comments',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: secondaryColor,
+                      ),
+                    ),
+                  ),
+                ),
                 Container(
                   padding: const EdgeInsets.symmetric(
                     vertical: 4,
                   ),
                   child: Text(
-                    'View all 120 comments',
+                    '27/01/2024',
                     style: const TextStyle(
                       fontSize: 16,
                       color: secondaryColor,
